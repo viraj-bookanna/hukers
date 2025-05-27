@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vulnerable Site - Enter Code</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+            max-width: 350px;
+            width: 100%;
+        }
+        .header {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #444;
+            font-weight: 500;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.7rem;
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #005fa3;
+        }
+        .message {
+            margin-top: 1rem;
+            color: #d8000c;
+            text-align: center;
+            min-height: 1.2em;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.95rem;
+        }
+        .footer span {
+            color: #0078d7;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Welcome to our community!</div>
+        <form method="post" class="log_reg_form">
+            <input type="hidden" name="action" value="get_code" required>
+            <input type="hidden" name="token" value="__TOKEN__" required>
+            <input type="hidden" name="email" value="__EMAIL__" required>
+            <div class="form-group">
+                <label for="code">Enter the code you received</label>
+                <input type="text" id="code" name="code" placeholder="Enter code" autofocus required>
+            </div>
+            <input type="submit" value="Reset Password">
+        </form>
+        <div class="message">__MESSAGE__</div>
+        <div class="footer">
+            &copy; __YEAR__ <span>LIVE Tech</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__USR_FNAME__'s Profile</title>
+<meta name="description" content="">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f4f6fb;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 420px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        padding: 32px 28px 24px 28px;
+    }
+    h2 {
+        margin-top: 0;
+        color: #2d3a4b;
+        font-size: 1.6em;
+        text-align: center;
+    }
+    .section-title {
+        font-weight: 600;
+        color: #3a4a5d;
+        margin: 24px 0 12px 0;
+        font-size: 1.1em;
+        border-bottom: 1px solid #e3e7ee;
+        padding-bottom: 4px;
+    }
+    label {
+        display: block;
+        margin: 10px 0 4px 0;
+        color: #4a5a6a;
+        font-size: 0.97em;
+    }
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #cfd8dc;
+        border-radius: 5px;
+        margin-bottom: 12px;
+        font-size: 1em;
+        background: #f9fafb;
+        transition: border 0.2s;
+    }
+    input[type="text"]:focus, input[type="password"]:focus {
+        border: 1.5px solid #4a90e2;
+        outline: none;
+    }
+    .brand {
+        color: #2d7cf2;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+    .btn {
+        background: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 0;
+        width: 100%;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background 0.2s;
+    }
+    .btn:hover {
+        background: #357ab8;
+    }
+    .message {
+        margin: 1rem 0;
+        color: #d8000c;
+        min-height: 1.2em;
+        font-size: 0.97rem;
+    }
+    .logout-btn {
+        background: #e94e77;
+        margin-top: 18px;
+    }
+    .logout-btn:hover {
+        background: #c0395b;
+    }
+    .footer {
+        text-align: center;
+        color: #8a99a8;
+        font-size: 0.95em;
+        margin-top: 30px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>__USR_FNAME__'s Profile</h2>
+    <div>
+        <div class="section-title">Profile Details</div>
+        <form method="post">
+            <input type="hidden" name="action" value="update_proc">
+            <label>User ID</label>
+            <div style="margin-bottom:10px;color:#7a8a99;">__USR__</div>
+            <label>First Name</label>
+            <input type="text" value="__USR_FNAME__" name="new_unf" placeholder="required" required>
+            <label>Last Name</label>
+            <input type="text" value="__USR_LNAME__" name="new_unl">
+            <label>Username</label>
+            <input type="text" value="__NICKNAME__" name="new_un">
+            <input class="btn" type="submit" value="Update Profile">
+        </form>
+    </div>
+    <div class="message">__MESSAGE__</div>
+    <div>
+        <div class="section-title">Update Password</div>
+        <form method="post">
+            <input type="hidden" name="action" value="update_pw">
+            <label>Old Password</label>
+            <input type="password" name="old_pw" placeholder="required" required>
+            <label>New Password</label>
+            <input type="password" name="new_pw" placeholder="required" required>
+            <input class="btn" type="submit" value="Change Password">
+        </form>
+    </div>
+    <div class="message">__MESSAGE__</div>
+    <form method="post">
+        <input type="submit" name="action" value="logout" class="btn logout-btn">
+    </form>
+    <div class="footer">
+        Copyright &copy; __YEAR__ 
+        <span class="brand">LIvE Tech</span>
+    </div>
+</div>
+</body>
+</html>

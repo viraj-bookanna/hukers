@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crack me</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background: #181c20;
+			color: #f5f5f5;
+			font-family: 'Segoe UI', Arial, sans-serif;
+			margin: 0;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 700px;
+			margin: 40px auto;
+			background: #23272b;
+			border-radius: 12px;
+			box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+			padding: 32px 24px 24px 24px;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 32px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+		.flex-row {
+			display: flex;
+			gap: 24px;
+			margin-bottom: 18px;
+		}
+		.flex-col {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+		textarea {
+			width: 100%;
+			min-height: 100px;
+			resize: vertical;
+			background: #181c20;
+			color: #f5f5f5;
+			border: 1px solid #444;
+			border-radius: 6px;
+			padding: 10px;
+			font-size: 1rem;
+			margin-bottom: 10px;
+		}
+		.btn-row {
+			display: flex;
+			gap: 24px;
+			margin-bottom: 20px;
+		}
+		button {
+			flex: 1;
+			padding: 10px 0;
+			background: #2d8cf0;
+			color: #fff;
+			border: none;
+			border-radius: 6px;
+			font-size: 1rem;
+			font-weight: 500;
+			cursor: pointer;
+			transition: background 0.2s;
+		}
+		button:hover {
+			background: #1a73e8;
+		}
+		label {
+			font-weight: 500;
+			margin-bottom: 6px;
+		}
+		#output {
+			min-height: 60px;
+			background: #181c20;
+			color: #f5f5f5;
+			border: 1px solid #444;
+			border-radius: 6px;
+			padding: 10px;
+			width: 100%;
+			margin-bottom: 18px;
+		}
+		.emsitems {
+			margin-top: 18px;
+			text-align: center;
+		}
+		#status {
+			margin-bottom: 8px;
+			font-size: 0.98rem;
+		}
+		#progress {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		#canvas {
+			background: #111;
+			border-radius: 8px;
+			width: 100%;
+			min-height: 180px;
+			margin-top: 10px;
+		}
+		@media (max-width: 700px) {
+			.container { padding: 16px 4px; }
+			.flex-row { flex-direction: column; gap: 12px; }
+			.btn-row { flex-direction: column; gap: 12px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Crack me</h1>
+		<div class="flex-row">
+			<div class="flex-col">
+				<label for="plainDataIn">Plain Data</label>
+				<textarea id="plainDataIn" placeholder="Enter plain text here"></textarea>
+				<button onclick="encrypt();">Encrypt</button>
+			</div>
+			<div class="flex-col">
+				<label for="encDataIn">Encrypted Data</label>
+				<textarea id="encDataIn" placeholder="Enter encrypted text here"></textarea>
+				<button onclick="decrypt();">Decrypt</button>
+			</div>
+		</div>
+		<label for="output">Console outputs:</label>
+		<textarea id="output" rows="4" readonly></textarea>
+		<div class="emsitems">
+			<div id="status">Downloading...</div>
+			<progress value="0" max="100" id="progress" hidden></progress>
+			<canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/helper.js"></script>
+	<script async type="text/javascript" src="js/crackme.js"></script>
+</body>
+</html>

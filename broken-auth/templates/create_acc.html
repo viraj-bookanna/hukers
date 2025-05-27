@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Create Account - Vulnerable Site</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 28px 24px 28px;
+        }
+        .title {
+            font-size: 1.7em;
+            font-weight: 600;
+            color: #2d3a4b;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .subtitle {
+            color: #6c7a89;
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        label {
+            font-weight: 500;
+            color: #34495e;
+            margin-bottom: 4px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px 12px;
+            border: 1px solid #d1d8e0;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+        input[type="submit"] {
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #357ab8;
+        }
+        .message {
+            margin: 1rem 0;
+            color: #e53e3e;
+            font-size: 0.98rem;
+            min-height: 1.2em;
+        }
+        .footer {
+            text-align: center;
+            color: #a5b1c2;
+            font-size: 0.95em;
+            margin-top: 24px;
+        }
+        @media (max-width: 500px) {
+            .container {
+                padding: 18px 8px 16px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Create Your Profile</div>
+        <div class="subtitle">Join our community and get started!</div>
+        <form method="post" class="log_reg_form">
+            <input type="hidden" name="action" value="create_acc" required>
+            <input type="hidden" name="email" value="__EMAIL__" required>
+            <input type="hidden" name="token" value="__TOKEN__" required>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" autofocus required>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="text" id="pass" name="pass" placeholder="Enter password" required>
+            </div>
+            <input type="submit" value="Create my account">
+        </form>
+        <div class="message">__MESSAGE__</div>
+        <div class="footer">
+            &copy; __YEAR__ LIVE Tech
+        </div>
+    </div>
+</body>
+</html>

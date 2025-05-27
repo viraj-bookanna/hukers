@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>User Profile - Vulnerable Site</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: #f4f6f8;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px 24px 16px 24px;
+        }
+        .profile-header {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .logout-link {
+            float: right;
+            font-size: 0.95em;
+            color: #e74c3c;
+            text-decoration: none;
+            margin-top: -30px;
+        }
+        .section-title {
+            font-size: 1.1em;
+            font-weight: 500;
+            margin: 24px 0 10px 0;
+            color: #555;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        input[type="submit"] {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #217dbb;
+        }
+        .message {
+            color: #444;
+            background: #f1f5f9;
+            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 18px;
+            text-align: center;
+            min-height: 32px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.95em;
+            color: #888;
+            margin-top: 24px;
+        }
+        @media (max-width: 500px) {
+            .container {
+                padding: 16px 4px 8px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            __USER__'s Profile
+            <a class="logout-link" href="/logout">Logout</a>
+        </div>
+
+        <div class="section-title">Edit Username</div>
+        <form method="post" class="log_reg_form">
+            <input type="hidden" name="job" value="change_username">
+            <input type="text" name="username" placeholder="New username" value="__USER__" required>
+            <input type="submit" value="Change Username">
+            <div class="message">__MESSAGE__</div>
+        </form>
+
+        <div class="section-title">Change Password</div>
+        <form method="post" class="log_reg_form">
+            <input type="hidden" name="job" value="change_password">
+            <input type="password" name="old_password" placeholder="Old password" required>
+            <input type="password" name="new_password" placeholder="New password" required>
+            <input type="submit" value="Change Password">
+            <div class="message">__MESSAGE__</div>
+        </form>
+
+        <div class="footer">
+            &copy; __YEAR__ LIVE Tech
+        </div>
+    </div>
+</body>
+</html>

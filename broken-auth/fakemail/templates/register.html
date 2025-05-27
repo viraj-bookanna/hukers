@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Fakemail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #4f8cff;
+            --bg: #f4f6fb;
+            --white: #fff;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --radius: 16px;
+        }
+        body {
+            background: var(--bg);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 370px;
+            margin: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 56px;
+            height: 56px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            color: var(--white);
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(79,140,255,0.12);
+        }
+        h2 {
+            margin-bottom: 0.7rem;
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1.7rem;
+            text-align: center;
+        }
+        form {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 1.1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #444;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1.5px solid #dbeafe;
+            border-radius: 7px;
+            font-size: 1.05rem;
+            box-sizing: border-box;
+            background: #f8fafc;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: var(--primary-light);
+            outline: none;
+            background: #fff;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.3rem;
+            letter-spacing: 0.5px;
+        }
+        input[type="submit"]:hover {
+            background: var(--primary-light);
+        }
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.7rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .login-link:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 18px;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+        .message {
+            margin-top: 1rem;
+            color: #e11d48;
+            min-height: 1.2em;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem 0.7rem;
+                max-width: 98vw;
+                border-radius: 10px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .logo {
+                width: 44px;
+                height: 44px;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">FM</div>
+        <h2>Sign Up for Fakemail</h2>
+        <div class="subtitle">Create your free account to start using Fakemail.</div>
+        <form method="post" autocomplete="off">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required autocomplete="username" placeholder="Choose a username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required autocomplete="new-password" placeholder="Create a password">
+            </div>
+            <input type="submit" value="Register">
+            <div class="message">__MESSAGE__</div>
+        </form>
+        <a class="login-link" href="./login">Already have an account? Login</a>
+    </div>
+    <div class="footer">
+        &copy; __YEAR__ &mdash; LIVE Tech
+    </div>
+</body>
+</html>

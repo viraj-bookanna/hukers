@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>NEWS</title>
+<meta name="description" content="">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<style>
+body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #f4f6fb;
+}
+.inner {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+}
+.nws_lbl_0 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2d3a4b;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    display: block;
+    text-align: center;
+}
+.brand {
+    color: #2d7cf2;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.nws_div {
+    margin-bottom: 32px;
+}
+.news-item {
+    background: #f9fafc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    margin-bottom: 24px;
+    padding: 20px 24px 16px 24px;
+    border-left: 5px solid #4f8cff;
+    transition: box-shadow 0.2s;
+}
+.news-item:hover {
+    box-shadow: 0 6px 24px rgba(44,62,80,0.13);
+}
+.news-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3a4b;
+    margin-bottom: 8px;
+}
+.news-content {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+.news-meta {
+    text-align: right;
+    font-size: 0.95rem;
+    color: #6c7a89;
+}
+.news-meta .onorr {
+    font-weight: 500;
+    color: #4f8cff;
+}
+.b_cast {
+    background: #f9fafc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    padding: 24px 20px;
+    margin-bottom: 32px;
+}
+.b_cast label {
+    font-weight: 500;
+    color: #2d3a4b;
+}
+.b_cast input[type="text"], .b_cast textarea {
+    width: 100%;
+    border: 1px solid #dbe2ef;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s;
+}
+.b_cast input[type="text"]:focus, .b_cast textarea:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.b_cast textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+.b_cast input[type="submit"] {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.b_cast input[type="submit"]:hover {
+    background: #356ae6;
+}
+.footer {
+    margin-top: 32px;
+    text-align: center;
+    color: #8a99b3;
+    font-size: 0.98rem;
+}
+</style>
+</head>
+<body>
+<div class="outer">
+<div class="inner">
+    <label class="nws_lbl_0">NEWS</label>
+    <div class="nws_div">
+        __NEWS__
+    </div>
+    <div class="b_cast" style="visibility: __WRITER__;">
+        <form method="post">
+            <label>Title: </label>
+            <input type="text" name="title" placeholder="required" autofocus required>
+            <label>Content: </label>
+            <textarea class="b_cast_textare" name="content" placeholder="some news here (required)" required></textarea>
+            <input type="submit" value="Broadcast">
+        </form>
+    </div>
+    <div class="footer">
+        Copyright &copy; __YEAR__ 
+        <span class="brand">LIvE Tech</span>
+    </div>
+</div>
+</div>
+</body>
+</html>

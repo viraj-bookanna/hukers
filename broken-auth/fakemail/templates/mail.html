@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Email Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 24px 16px;
+        }
+        .mail-info {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .mail-info th, .mail-info td {
+            text-align: left;
+            padding: 10px 8px;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+        .mail-info th {
+            color: #888;
+            width: 32%;
+            font-weight: 600;
+            background: #fafafa;
+        }
+        .mail-info td {
+            background: #fff;
+        }
+        .message {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 18px;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 4px;
+            }
+            .mail-info th, .mail-info td {
+                font-size: 15px;
+                padding: 8px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="mail-info">
+            <tr><th>Date:</th><td>__DATE__</td></tr>
+            <tr><th>Sender:</th><td>__SENDER__</td></tr>
+            <tr><th>Subject:</th><td>__SUBJECT__</td></tr>
+        </table>
+        <div class="message">__DATA__</div>
+    </div>
+    <div class="footer">
+        &copy; __YEAR__ &mdash; LIVE Tech
+    </div>
+</body>
+</html>

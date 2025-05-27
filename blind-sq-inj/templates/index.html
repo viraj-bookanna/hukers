@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+        }
+        .container {
+            max-width: 420px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+            padding: 32px 28px 24px 28px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        .brand {
+            color: #2d7cf2;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .header h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.1em;
+            letter-spacing: 2px;
+            color: #2a4d8f;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+            margin-bottom: 18px;
+        }
+        .nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #2a4d8f;
+            font-size: 0.98em;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #1b2e4b;
+        }
+        .nav img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 6px;
+            border-radius: 8px;
+            background: #e9eef7;
+            padding: 6px;
+            transition: box-shadow 0.2s;
+        }
+        .nav a:hover img {
+            box-shadow: 0 2px 8px rgba(42,77,143,0.13);
+        }
+        .content {
+            margin-bottom: 22px;
+            background: #f7faff;
+            border-radius: 8px;
+            padding: 18px 14px;
+            font-size: 1.08em;
+            color: #333;
+            min-height: 60px;
+        }
+        .challenge-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #e3eaf7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+        }
+        .challenge-label {
+            font-weight: 600;
+            color: #2a4d8f;
+            font-size: 1.05em;
+        }
+        .challenge-link img {
+            width: 38px;
+            height: 38px;
+            border-radius: 6px;
+            background: #fff;
+            padding: 4px;
+            transition: box-shadow 0.2s;
+        }
+        .challenge-link img:hover {
+            box-shadow: 0 2px 8px rgba(42,77,143,0.13);
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 18px;
+        }
+        @media (max-width: 500px) {
+            .container { padding: 16px 6px 12px 6px; }
+            .nav img { width: 38px; height: 38px; }
+            .challenge-section { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WELCOME to LIvE</h1>
+        </div>
+        <nav class="nav">
+            <a href="/news">
+                <img src="/images/news.png" alt="News">
+                News
+            </a>
+            <a href="/profile">
+                <img src="/images/profile.png" alt="Profile">
+                Profile
+            </a>
+        </nav>
+        <div class="content">
+            <p>Welcome to LIvE! Stay updated with the latest news and manage your profile easily. Explore our challenge platform to test your skills.</p>
+        </div>
+        <div class="challenge-section">
+            <span class="challenge-label">CHALLENGE PLATFORM:</span>
+            <a class="challenge-link" href="/challenge">
+                <img src="/images/challenge.png" alt="Challenge">
+            </a>
+        </div>
+        <div class="footer">
+            Copyright &copy; __YEAR__ 
+            <span class="brand">LIvE Tech</span>
+        </div>
+    </div>
+</body>
+</html>

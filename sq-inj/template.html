@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script type="text/javascript" src="/aes.js"></script>
+    <script>
+        function toNumbers(d) {
+            var e = [];
+            d.replace(/(..)/g, function(d) {
+                e.push(parseInt(d, 16))
+            });
+            return e
+        }
+        function toHex() {
+            for (
+                var d = [],
+                    d = 1 == arguments.length && arguments[0].constructor == Array ? arguments[0] : arguments,
+                    e = "",
+                    f = 0;
+                f < d.length;
+                f++
+            )
+                e += (16 > d[f] ? "0" : "") + d[f].toString(16);
+            return e.toLowerCase()
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 0.7rem 0; /* reduced */
+            text-align: center;
+            font-size: 1rem; /* reduced */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.3rem; /* reduced */
+        }
+        main {
+            max-width: 400px;
+            margin: 2rem auto 1rem auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 2rem 1rem 1.2rem 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        input[type="text"] {
+            padding: 0.5rem;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        input[type="submit"] {
+            padding: 0.5rem;
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #005fa3;
+        }
+        .message {
+            margin-top: 1rem;
+            color: #c00;
+            font-weight: bold;
+            min-height: 1.5em;
+        }
+        .hack-banner {
+            margin: 1.2rem 0 0 0;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #444;
+            letter-spacing: 2px;
+        }
+        marquee {
+            margin-top: 1rem;
+        }
+        .content {
+            font-family: monospace;
+            font-size: 1.05rem;
+            color: #0078d7;
+        }
+        footer {
+            text-align: center;
+            padding: 0.5rem 0; /* reduced */
+            background: #222;
+            color: #fff;
+            font-size: 0.95rem; /* reduced */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 500px) {
+            main {
+                max-width: 95vw;
+                padding: 1rem 0.5rem 1rem 0.5rem;
+            }
+            header h1 {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <div style="background: #ffdddd; color: #900; padding: 1rem; text-align: center;">
+            This site requires Javascript to work, please enable Javascript in your browser or use a browser with Javascript support
+        </div>
+    </noscript>
+    <header>
+        <h1>Welcome to the Vulnerable site</h1>
+    </header>
+    <main>
+        <form method="post">
+            <label>
+                Username:
+                <input type="text" name="u_id" required>
+            </label>
+            <label>
+                Password:
+                <input type="text" name="pw" required>
+            </label>
+            <input type="submit" value="Login">
+        </form>
+        <div class="message">
+            __MESSAGE__<br>
+        </div>
+        <div class="hack-banner">
+            HACK ME IF YOU CAN
+        </div>
+        <marquee>
+            <div class="content" style="margin-top: 0px;">
+                &nbsp;(\____/) &nbsp;<br>
+                &nbsp;( ͡ ͡° ͜ ʖ ͡ ͡°) &nbsp;<br>
+                &nbsp;\╭☞ \╭☞&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HACK ME IF YOU CAN<br>
+            </div>
+        </marquee>
+    </main>
+    <footer>
+        <p>&copy; __YEAR__ LIvE Tech</p>
+    </footer>
+</body>
+</html>
